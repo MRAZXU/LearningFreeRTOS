@@ -187,7 +187,7 @@ void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem )
 		}
 	}
 
-	pxNewListItem->pxNext = pxIterator->双向列表的插入 具体图解分析比较直观 文字叙述有点绕
+	pxNewListItem->pxNext = pxIterator->pxNext; //双向列表的插入 具体图解分析比较直观 文字叙述有点绕
 	pxNewListItem->pxNext->pxPrevious = pxNewListItem;
 	pxNewListItem->pxPrevious = pxIterator;
 	pxIterator->pxNext = pxNewListItem;
